@@ -1,95 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Kesiena's Profile Card</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <meta charset="UTF-8" />
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Kesiena Cruz | Portfolio</title>
+  <link rel="stylesheet" href="main.css" />
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <article data-testid="test-profile-card">
-        <div class="profile-main-content">
-            <figure data-testid="test-user-avatar">
-                <img 
-                    src="img/picture.jpg" alt="Kesiena Cruz" tabindex="0">
-            </figure>
-            
-            <div class="profile-text-content">
-                <header>
-                    <h2 data-testid="test-user-name">Kesiena Cruz</h2>
-                </header>
+  <header>
+    <nav class="navbar">
+      <h1>Kesiena Cruz</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <p data-testid="test-user-bio">
-                    A dedicated Frontend Engineer on a journey to become a Full-Stack engineer.
-                    I turn complex requirements into elegant, user-friendly, and semantic web experiences. 
-                    I believe performance is a feature!
-                </p>
+  <main class="main">
+    <article data-testid="test-profile-card" class="hero">
+      <figure class="hero-image">
+        <img src="img/picture.jpg" alt="Kesiena Cruz" data-testid="test-user-avatar" />
+      </figure>
+      <section class="hero-content fade-in">
+        <h2 data-testid="test-user-name">Kesiena Cruz</h2>
+        <p data-testid="test-user-bio">Fullstack developer & Educator passionate about building digital solutions and mentoring future innovators.</p>
+        <p>Time (ms): <span id="userTime" data-testid="test-user-time"></span></p>
 
-                <small data-testid="test-user-time">
-                    Current Time (ms):
-                    <span>Loading...</span>
-                </small>
-                
-                <nav aria-label="User social media and contact links">
-                    <ul data-testid="test-user-social-links">
-                        <li data-testid="test-user-social-github">
-                            <a href="https://github.com/kesienacruz" target="_blank" rel="noopener noreferrer">
-                                GitHub
-                            </a>
-                        </li>
-                        <li data-testid="test-user-social-linkedin">
-                            <a href="https://www.linkedin.com/in/kesiena-c-ohwota-ba715291/" target="_blank" rel="noopener noreferrer">
-                                LinkedIn
-                            </a>
-                        </li>
-                        <li data-testid="test-user-social-facebook">
-                            <a href="https://www.facebook.com/ohwota" target="_blank" rel="noopener noreferrer">
-                                Facebook
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <nav data-testid="test-user-social-links" class="social-links">
+          <a href="https://www.facebook.com/ohwota" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-faceboook"><img src="img/x.png"></a>
+          <a href="https://www.linkedin.com/in/kesiena-c-ohwota-ba715291/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin"><img src="img/li.png"></a>
+          <a href="https://github.com/kesienacruz" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github"><img src="img/git.png"></a>
+        </nav>
 
-        <div class="profile-lists">
-            <section aria-labelledby="hobbies-heading">
-                <h3 id="hobbies-heading">Hobbies</h3>
-                <ul data-testid="test-user-hobbies">
-                    <li>Competitive coding challenges</li>
-                    <li>Travelling</li>
-                    <li>Cooking</li>
-                </ul>
-            </section>
+        <section data-testid="test-user-hobbies">
+          <h3>Hobbies</h3>
+          <ul>
+            <li>Programming</li>
+            <li>Teaching</li>
+            <li>Playing Chess</li>
+          </ul>
+        </section>
 
-            <section aria-labelledby="dislikes-heading">
-                <h3 id="dislikes-heading">Dislikes</h3>
-                <ul data-testid="test-user-dislikes">
-                    <li>Deeply nested CSS selectors</li>
-                    <li>Non-descriptive alt text</li>
-                    <li>Unnecessary use of <q>!important</q></li>
-                </ul>
-            </section>
-        </div>
+        <section data-testid="test-user-dislikes">
+          <h3>Dislikes</h3>
+          <ul>
+            <li>Procrastination</li>
+            <li>Unclear code</li>
+            <li>Negativity</li>
+          </ul>
+        </section>
+      </section>
     </article>
-
-    <script>
-    
-        const timeDisplay = document.querySelector('[data-testid="test-user-time"] span');
-
-        function updateTime() {
-            const currentTimeMs = Date.now();
-            
-            if (timeDisplay) {
-                timeDisplay.textContent = currentTimeMs;
-            }
-        }
-        updateTime();
-
-        setInterval(updateTime, 1000);
-        </script>
+  </main>
 </body>
-
 </html>
-
