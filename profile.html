@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Kesiena Cruz | Portfolio</title>
+  <link rel="stylesheet" href="main.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Kesiena Cruz</h1>
+      <ul>
+        <li><a href="profile.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <article data-testid="test-profile-card" class="hero">
+      <figure class="hero-image">
+        <img src="img/picture.jpg" alt="Kesiena Cruz" data-testid="test-user-avatar" />
+      </figure>
+      <section class="hero-content fade-in">
+        <h2 data-testid="test-user-name">Kesiena Cruz</h2>
+        <p data-testid="test-user-bio">Fullstack developer & Educator passionate about building digital solutions and mentoring future innovators.</p>
+        <p>Time (ms): <span id="userTime" data-testid="test-user-time"></span></p>
+
+        <nav data-testid="test-user-social-links" class="social-links">
+          <a href="https://www.facebook.com/ohwota" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-faceboook"><img src="img/x.png"></a>
+          <a href="https://www.linkedin.com/in/kesiena-c-ohwota-ba715291/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin"><img src="img/li.png"></a>
+          <a href="https://github.com/kesienacruz" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github"><img src="img/git.png"></a>
+        </nav>
+
+        <section data-testid="test-user-hobbies">
+          <h3>Hobbies</h3>
+          <ul>
+            <li>Programming</li>
+            <li>Teaching</li>
+            <li>Playing Chess</li>
+          </ul>
+        </section>
+
+        <section data-testid="test-user-dislikes">
+          <h3>Dislikes</h3>
+          <ul>
+            <li>Procrastination</li>
+            <li>Unclear code</li>
+            <li>Negativity</li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
